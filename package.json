@@ -1,0 +1,16 @@
+{
+  "name": "aternosserverfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.1.1",
+    "get-ip-range": "^4.0.1",
+    "minecraft-status": "^1.1.0"
+  }
+}

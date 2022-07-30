@@ -1,0 +1,8 @@
+{
+    "token": "Discord token goes here",
+    "clientId": "Discord client id goes here",
+
+    "portRange": [8000, 65535],
+    "ipRange": ["193.56.129.200", "193.56.129.230"],
+    "threadsCount": 5000
+}
