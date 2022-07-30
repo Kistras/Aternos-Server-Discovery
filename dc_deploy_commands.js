@@ -3,11 +3,17 @@ const { REST } = require('@discordjs/rest');
 const { token, clientId } = require('./config.json');
 
 const commands = [
-	new SlashCommandBuilder().setName('top').setDescription('Returns TOP 10 servers sorted by players.')
+	new SlashCommandBuilder().setName('top').setDescription('Returns TOP 10 servers sorted by players')
 	.addIntegerOption(option => option.setName('page').setDescription('Selects page'))
 	.addStringOption(option => option.setName('version').setDescription('Selects version')),
-	new SlashCommandBuilder().setName('server').setDescription('Returns information about specific server'),
-	new SlashCommandBuilder().setName('start').setDescription('Starts serverfinder. Sends information into the same channel')
+	
+	new SlashCommandBuilder().setName('server').setDescription('Returns information about specific server')
+	.addStringOption(option => option.setName('ip').setDescription('ip').setRequired(true)),
+	
+	new SlashCommandBuilder().setName('findplayer').setDescription('Find a player with requested name at all found servers')
+	.addStringOption(option => option.setName('name').setDescription('name').setRequired(true)),
+
+	new SlashCommandBuilder().setName('start').setDescription('Starts serverfinder')
 ]
 	.map(command => command.toJSON());
 
